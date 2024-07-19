@@ -1,0 +1,90 @@
+keybinds clear-defaults=true {
+    tmux {
+        bind "q" "Esc" { SwitchToMode "Normal"; }
+
+        bind "-" { NewPane "Down"; SwitchToMode "Normal"; }
+        bind "|" { NewPane "Right"; SwitchToMode "Normal"; }
+        bind "f" { ToggleFloatingPanes; SwitchToMode "Normal"; }
+        bind "F" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
+
+        bind "Space" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
+
+        bind "c" { NewTab; SwitchToMode "Normal"; }
+        bind "x" { CloseFocus; SwitchToMode "Normal"; }
+
+        bind "p" { GoToPreviousTab; SwitchToMode "Normal"; }
+        bind "n" { GoToNextTab; SwitchToMode "Normal"; }
+
+        bind "h" { MoveFocus "Left"; SwitchToMode "Normal"; }
+        bind "l" { MoveFocus "Right"; SwitchToMode "Normal"; }
+        bind "j" { MoveFocus "Down"; SwitchToMode "Normal"; }
+        bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
+
+        bind "H" { MovePane "Left"; SwitchToMode "Normal"; }
+        bind "L" { MovePane "Right"; SwitchToMode "Normal"; }
+        bind "J" { MovePane "Down"; SwitchToMode "Normal"; }
+        bind "K" { MovePane "Up"; SwitchToMode "Normal"; }
+
+        bind "Left" { Resize "Left"; }
+        bind "Right" { Resize "Right"; }
+        bind "Down" { Resize "Down"; }
+        bind "Up" { Resize "Up"; }
+
+        bind "Ctrl u" { HalfPageScrollUp; }
+        bind "Ctrl d" { HalfPageScrollDown; }
+
+        bind "d" { Detach; }
+
+        bind "/" "?" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "T" { SwitchToMode "RenameTab"; TabNameInput 0; }
+        bind "P" { SwitchToMode "RenamePane"; PaneNameInput 0; }
+    }
+    search {
+        bind "q" "Esc" { SwitchToMode "Normal"; }
+
+        bind "Ctrl d" { HalfPageScrollDown; }
+        bind "Ctrl u" { HalfPageScrollUp; }
+
+        bind "Ctrl f" { PageScrollDown; }
+        bind "Ctrl b" { PageScrollUp; }
+
+        bind "n" { Search "down"; }
+        bind "p" { Search "up"; }
+
+        bind "/" "?" { SwitchToMode "EnterSearch"; SearchInput 0; }
+    }
+    entersearch {
+        bind "Esc" { SwitchToMode "Normal"; }
+        bind "Enter" { SwitchToMode "Search"; Search "down"; }
+    }
+    renametab {
+        bind "Enter" { SwitchToMode "Normal"; }
+        bind "Esc" { UndoRenameTab; SwitchToMode "Normal"; }
+    }
+    renamepane {
+        bind "Enter" { SwitchToMode "Normal"; }
+        bind "Esc" { UndoRenamePane; SwitchToMode "Normal"; }
+    }
+    shared_except "tmux" "locked" {
+        bind "Ctrl Space" { SwitchToMode "Tmux"; }
+    }
+}
+
+
+default_layout "compact"
+
+default_shell "nu"
+
+theme "catppuccin-mocha"
+
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name true
+    }
+}
+
+plugins {
+    compact-bar location="zellij:compact-bar"
+    session-manager location="zellij:session-manager"
+}
