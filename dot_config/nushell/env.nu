@@ -35,8 +35,7 @@ $env.EDITOR = "nvim"
 
 $env.CARGO_HOME = ($env.HOME | path join .cargo)
 
-# TODO: go rename to .go
-$env.GOPATH = ($env.HOME | path join go)
+$env.GOPATH = ($env.HOME | path join .go)
 $env.GO111MODULE = "on"
 $env.GOPROXY = "https://goproxy.cn,direct"
 
@@ -58,5 +57,5 @@ $env.PATH = (
 # starship
 starship init nu | save -f ~/.cache/starship.nu
 
-# zoxidex 
+# zoxide 
 zoxide init nushell | save -f ~/.cache/zoxide.nu
