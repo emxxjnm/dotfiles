@@ -39,6 +39,8 @@ $env.GOPATH = ($env.HOME | path join .go)
 $env.GO111MODULE = "on"
 $env.GOPROXY = "https://goproxy.cn,direct"
 
+$env.PNPM_HOME = ($env.HOME | path join .pnpm)
+
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 $env.PATH = (
