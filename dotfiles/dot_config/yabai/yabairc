@@ -36,5 +36,6 @@ yabai -m rule --add app="^(Karabiner-Elements|Karabiner-EventViewer|Postman|Clas
 yabai -m rule --add app="^(WeCom|企业微信)$" manage=off space=left
 yabai -m rule --add app="^(WeChat|QQ音乐)$" manage=off space=right
 
+yabai -m space --focus main
 
 echo "yabai configuration loaded.."
