@@ -73,7 +73,7 @@ keybinds clear-defaults=true {
 
 default_layout "compact"
 
-default_shell "nu"
+default_shell "/usr/local/bin/nu"
 
 theme "catppuccin-mocha"
 
