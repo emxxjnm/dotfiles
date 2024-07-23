@@ -5,11 +5,11 @@ sudo yabai --load-sa
 
 yabai_config=(
   layout                    bsp
-  top_padding               8
-  bottom_padding            8
-  left_padding              8
-  right_padding             8
-  window_gap                8
+  top_padding               10
+  bottom_padding            10
+  left_padding              13
+  right_padding             13
+  window_gap                10
   auto_balance              off
   mouse_follows_focus       off
   focus_follows_mouse       autofocus
@@ -29,13 +29,12 @@ yabai -m space 1 --label left
 yabai -m space 2 --label main
 yabai -m space 3 --label right
 
+yabai -m rule --add app="^(Messages|Mail|Calculator|Software Update|Dictionary|System Preferences|System Settings|Photo Booth|Archive Utility|App Store|Activity Monitor|Clock|Preview)$" manage=off
+
+yabai -m rule --add app="^(Karabiner-Elements|Karabiner-EventViewer|Postman|Clash Verge|SwitchHosts|Docker Desktop|DBeaver)$" manage=off
+
 yabai -m rule --add app="^(WeCom|企业微信)$" manage=off space=left
 yabai -m rule --add app="^(WeChat|QQ音乐)$" manage=off space=right
 
-yabai -m rule --add app="^(Messages|Mail|Calculator|Software Update|Dictionary|System Preferences|System Settings|Photo Booth|Archive Utility|App Store|Activity Monitor|Clock|Preview)$" manage=off
-yabai -m rule --add app="^(Karabiner-Elements|Karabiner-EventViewer|Postman|Clash Verge|SwitchHosts|Docker Desktop)$" manage=off
-
-yabai -m rule --add app="^DBeaver$" manage=off
-yabai -m rule --add app="^哔哩哔哩$" manage=off
 
 echo "yabai configuration loaded.."
