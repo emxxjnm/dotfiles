@@ -30,12 +30,15 @@ yabai -m space 2 --label main
 yabai -m space 3 --label right
 
 yabai -m rule --add app="^(Messages|Mail|Calculator|Software Update|Dictionary|System Preferences|System Settings|Photo Booth|Archive Utility|App Store|Activity Monitor|Clock|Preview)$" manage=off
+yabai -m rule --add app="^(信息|邮件|计算器|词典|系统设置|字体册|时钟|活动监视器|预览)$" manage=off
 
 yabai -m rule --add app="^(Karabiner-Elements|Karabiner-EventViewer|Postman|Clash Verge|SwitchHosts|Docker Desktop|DBeaver)$" manage=off
 
 yabai -m rule --add app="^(WeCom|企业微信)$" manage=off space=left
-yabai -m rule --add app="^(WeChat|QQ音乐)$" manage=off space=right
+yabai -m rule --add app="^(WeChat|微信|QQ音乐)$" manage=off space=right
 
 yabai -m space --focus main
+
+yabai -m rule --apply
 
 echo "yabai configuration loaded.."
