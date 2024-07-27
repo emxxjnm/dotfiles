@@ -1,0 +1,33 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ $brews := list
+     "jq"
+     "go"
+     "node"
+     "wget"
+     "curl"
+     "git"
+     "fd"
+     "fzf"
+     "ripgrep"
+     "zoxide"
+     "lazygit"
+     "nushell"
+     "zellij" -}}
+{{ $casks := list
+     "google-chrome"
+     "httpie"
+     "karabiner-elements"
+     "wezterm"
+     "alacritty" -}}
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end -}}
+{{ range ($casks | sortAlpha | uniq) -}}
+cask "{{ . }}"
+{{ end -}}
+EOF
