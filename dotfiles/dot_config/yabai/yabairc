@@ -29,7 +29,7 @@ yabai -m space 1 --label left
 yabai -m space 2 --label main
 yabai -m space 3 --label right
 
-yabai -m rule --add app="^(Messages|Mail|Calculator|Software Update|Dictionary|System Preferences|System Settings|Photo Booth|Archive Utility|App Store|Activity Monitor|Clock|Preview)$" manage=off
+yabai -m rule --add app="^(Messages|Mail|Calculator|Software Update|Dictionary|System Preferences|System Settings|Photo Booth|Archive Utility|App Store|Activity Monitor|Clock|Preview|Font Book)$" manage=off
 yabai -m rule --add app="^(信息|邮件|计算器|词典|系统设置|字体册|时钟|活动监视器|预览)$" manage=off
 
 yabai -m rule --add app="^(Karabiner-Elements|Karabiner-EventViewer|HTTPie|Postman|Clash Verge|SwitchHosts|Docker Desktop|DBeaver)$" manage=off
