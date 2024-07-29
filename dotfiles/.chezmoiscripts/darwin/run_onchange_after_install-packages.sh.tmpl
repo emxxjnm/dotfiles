@@ -2,6 +2,8 @@
 
 set -eufo pipefail
 
+{{ $taps := list
+    "koekeishiya/formulae" -}}
 {{ $brews := list
      "jq"
      "go"
@@ -13,9 +15,13 @@ set -eufo pipefail
      "fzf"
      "ripgrep"
      "zoxide"
+     "starship"
+     "neovim"
      "lazygit"
      "nushell"
-     "zellij" -}}
+     "zellij"
+     "koekeishiya/formulae/skhd"
+     "koekeishiya/formulae/yabai" -}}
 {{ $casks := list
      "google-chrome"
      "httpie"
@@ -24,6 +30,9 @@ set -eufo pipefail
      "alacritty" -}}
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range ($taps | sortAlpha | uniq) -}}
+tap "{{ . }}"
+{{ end -}}
 {{ range ($brews | sortAlpha | uniq) -}}
 brew "{{ . }}"
 {{ end -}}
