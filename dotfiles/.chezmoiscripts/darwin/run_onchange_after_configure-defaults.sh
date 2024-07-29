@@ -17,8 +17,11 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Disable automatically rearrange Spaces based on recent use
-defaults write com.apple.dock "mru-spaces" -bool "true"
+defaults write com.apple.dock mru-spaces -bool false
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+
+# Automatically hide and show the menu bar
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
 
