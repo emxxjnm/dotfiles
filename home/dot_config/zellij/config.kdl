@@ -2,6 +2,7 @@ keybinds clear-defaults=true {
     tmux {
         bind "q" "Esc" { SwitchToMode "Normal"; }
 
+        bind "." { NewPane; SwitchToMode "Normal"; }
         bind "-" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "|" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "f" { ToggleFloatingPanes; SwitchToMode "Normal"; }
@@ -10,6 +11,7 @@ keybinds clear-defaults=true {
         bind "Space" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
 
         bind "c" { NewTab; SwitchToMode "Normal"; }
+        bind "b" { BreakPane; SwitchToMode "Normal"; }
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
 
         bind "p" { GoToPreviousTab; SwitchToMode "Normal"; }
@@ -25,10 +27,12 @@ keybinds clear-defaults=true {
         bind "J" { MovePane "Down"; SwitchToMode "Normal"; }
         bind "K" { MovePane "Up"; SwitchToMode "Normal"; }
 
+        bind "Up" { Resize "Up"; }
+        bind "Down" { Resize "Down"; }
         bind "Left" { Resize "Left"; }
         bind "Right" { Resize "Right"; }
-        bind "Down" { Resize "Down"; }
-        bind "Up" { Resize "Up"; }
+        bind "_" { Resize "Decrease"; }
+        bind "+" { Resize "Increase"; }
 
         bind "Ctrl u" { HalfPageScrollUp; }
         bind "Ctrl d" { HalfPageScrollDown; }
