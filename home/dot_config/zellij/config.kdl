@@ -3,7 +3,7 @@ keybinds clear-defaults=true {
         bind "q" "Esc" { SwitchToMode "Normal"; }
 
         bind "." { NewPane; SwitchToMode "Normal"; }
-        bind "-" { NewPane "Down"; SwitchToMode "Normal"; }
+        bind "_" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "|" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "f" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "F" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
@@ -31,7 +31,7 @@ keybinds clear-defaults=true {
         bind "Down" { Resize "Down"; }
         bind "Left" { Resize "Left"; }
         bind "Right" { Resize "Right"; }
-        bind "_" { Resize "Decrease"; }
+        bind "-" { Resize "Decrease"; }
         bind "+" { Resize "Increase"; }
 
         bind "Ctrl u" { HalfPageScrollUp; }
