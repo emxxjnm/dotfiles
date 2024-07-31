@@ -28,6 +28,7 @@ keybinds clear-defaults=true {
         bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
 
         // Pane: Layout
+        bind "r" { NextSwapLayout; SwitchToMode "Normal"; }
         bind "H" { MovePane "Left"; SwitchToMode "Normal"; }
         bind "L" { MovePane "Right"; SwitchToMode "Normal"; }
         bind "J" { MovePane "Down"; SwitchToMode "Normal"; }

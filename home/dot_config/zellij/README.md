@@ -53,6 +53,7 @@ zellij version:  v0.40.1+
 
 | Keys                     | Description                            |
 | ------------------------ | -------------------------------------- |
+| <kbd>r</kbd>             | Next swap layout(rotate)               |
 | <kbd>H</kbd>             | Move pane to left                      |
 | <kbd>L</kbd>             | Move pane to right                     |
 | <kbd>J</kbd>             | Move pane to down                      |
