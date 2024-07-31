@@ -2,31 +2,42 @@ keybinds clear-defaults=true {
     tmux {
         bind "q" "Esc" { SwitchToMode "Normal"; }
 
+        // Tab: Spawn + Close
+        bind "c" { NewTab; SwitchToMode "Normal"; }
+        bind "X" { CloseTab; SwitchToMode "Normal"; }
+        bind "b" { BreakPane; SwitchToMode "Normal"; }
+
+        // Tab: Navigation
+        bind "p" { GoToPreviousTab; SwitchToMode "Normal"; }
+        bind "n" { GoToNextTab; SwitchToMode "Normal"; }
+        bind "[" { MoveTab "Left"; SwitchToMode "Normal"; }
+        bind "]" { MoveTab "Right"; SwitchToMode "Normal"; }
+
+        // Pane: Spawn + Close
         bind "." { NewPane; SwitchToMode "Normal"; }
         bind "_" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "|" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "f" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "F" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
-
-        bind "Space" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
-
-        bind "c" { NewTab; SwitchToMode "Normal"; }
-        bind "b" { BreakPane; SwitchToMode "Normal"; }
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
 
-        bind "p" { GoToPreviousTab; SwitchToMode "Normal"; }
-        bind "n" { GoToNextTab; SwitchToMode "Normal"; }
-
+        // Pane: Navigation
         bind "h" { MoveFocus "Left"; SwitchToMode "Normal"; }
         bind "l" { MoveFocus "Right"; SwitchToMode "Normal"; }
         bind "j" { MoveFocus "Down"; SwitchToMode "Normal"; }
         bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
 
+        // Pane: Layout
         bind "H" { MovePane "Left"; SwitchToMode "Normal"; }
         bind "L" { MovePane "Right"; SwitchToMode "Normal"; }
         bind "J" { MovePane "Down"; SwitchToMode "Normal"; }
         bind "K" { MovePane "Up"; SwitchToMode "Normal"; }
 
+        // Pane: Zoom
+        bind "Space" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
+
+
+        // Pane: Resize
         bind "Up" { Resize "Up"; }
         bind "Down" { Resize "Down"; }
         bind "Left" { Resize "Left"; }
@@ -34,11 +45,12 @@ keybinds clear-defaults=true {
         bind "-" { Resize "Decrease"; }
         bind "+" { Resize "Increase"; }
 
+        // Pane: Scroll
         bind "Ctrl u" { HalfPageScrollUp; }
         bind "Ctrl d" { HalfPageScrollDown; }
 
+        // Miscellaneous
         bind "d" { Detach; }
-
         bind "/" "?" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "T" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "P" { SwitchToMode "RenamePane"; PaneNameInput 0; }
