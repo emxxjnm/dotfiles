@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 local M = {
   audible_bell = "Disabled",
 
-  default_prog = { "/usr/local/bin/nu", "-l" },
+  -- default_prog = { "/usr/local/bin/nu", "-l" },
 
   font_size = 15,
   font = wezterm.font("JetBrainsMono Nerd Font"),
