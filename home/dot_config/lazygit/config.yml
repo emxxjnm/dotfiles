@@ -20,3 +20,6 @@ gui:
       - '#cdd6f4'
     searchingActiveBorderColor:
       - '#f9e2af'
+git:
+  paging:
+    pager: 'delta --dark --paging=never'
