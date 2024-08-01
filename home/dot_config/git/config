@@ -5,6 +5,9 @@
 [includeIf "gitdir:~/workspace/work/"]
   path = "~/workspace/work/.gitconfig"
 
+[init]
+  defaultBranch = main
+
 [core]
   editor = "nvim"
   excludesfile ="~/.gitignore"
@@ -25,10 +28,18 @@
 [alias]
   br = "branch"
   co = "checkout"
-  st = "status"
 
-[init]
-  defaultBranch = main
+  # View the current working tree status using the short format.
+  s = status -s
+
+  # Show the user email for the current repository.
+  whoami = config user.email
+
+[diff]
+  colorMoved = default
+
+[interactive]
+  diffFilter = delta --color-only
 
 [delta]
   features = catppuccin-mocha
