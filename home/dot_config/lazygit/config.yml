@@ -2,24 +2,34 @@ gui:
   border: rounded
   theme:
     activeBorderColor:
-      - '#89b4fa'
+      - '#fab387'
       - bold
     inactiveBorderColor:
-      - '#a6adc8'
+      - '#7f849c' # '#a6adc8'
+    searchingActiveBorderColor:
+      - '#f9e2af'
     optionsTextColor:
       - '#89b4fa'
     selectedLineBgColor:
       - '#313244'
+    inactiveViewSelectedLineBgColor:
+      - bold
+    cherryPickedCommitFgColor:
+      - '#fab387'
     cherryPickedCommitBgColor:
       - '#45475a'
-    cherryPickedCommitFgColor:
-      - '#89b4fa'
+    markedBaseCommitFgColor:
+      - '#fab387'
+    markedBaseCommitBgColor:
+      - '#45475a'
     unstagedChangesColor:
       - '#f38ba8'
     defaultFgColor:
-      - '#cdd6f4'
-    searchingActiveBorderColor:
-      - '#f9e2af'
+      - '#bac2de' # '#cdd6f4'
+  authorColors:
+    '*': '#b4befe'
+
 git:
   paging:
+    colorArg: always
     pager: 'delta --dark --paging=never'
