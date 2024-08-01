@@ -1,8 +1,10 @@
-## dotfiles
+<p align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=B7BDF8&center=true&vCenter=true&width=435&lines=east+or+west%2C+~+is+the+best" alt="Typing SVG" />  
+  </a>
+</p>
 
-### TODO
+------
 
-* [ ] link nushell config folder for macos
-* [ ] add brew install script for macos
-* [ ] use Brewfile for brew install
-* [ ] add rust(rustup) install script
+dotfiles power by chezmoi.
+
