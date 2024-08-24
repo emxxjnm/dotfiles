@@ -15,6 +15,7 @@ set -eufo pipefail
      "bat"
      "fd"
      "fzf"
+     "yazi"
      "ripgrep"
      "zoxide"
      "starship"
@@ -26,11 +27,12 @@ set -eufo pipefail
      "koekeishiya/formulae/skhd"
      "koekeishiya/formulae/yabai" -}}
 {{ $casks := list
-     "google-chrome"
      "httpie"
-     "karabiner-elements"
      "wezterm"
-     "alacritty" -}}
+     "alacritty"
+     "google-chrome"
+     "karabiner-elements"
+     "visual-studio-code" -}}
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range ($taps | sortAlpha | uniq) -}}
