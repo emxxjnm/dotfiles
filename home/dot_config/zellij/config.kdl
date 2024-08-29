@@ -44,7 +44,7 @@ keybinds clear-defaults=true {
         bind "Left" { Resize "Left"; }
         bind "Right" { Resize "Right"; }
         bind "-" { Resize "Decrease"; }
-        bind "+" { Resize "Increase"; }
+        bind "=" { Resize "Increase"; }
 
         // Pane: Scroll
         bind "Ctrl u" { HalfPageScrollUp; }
