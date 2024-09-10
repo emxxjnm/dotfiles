@@ -14,6 +14,10 @@ HISTSIZE=100000
 SAVEHIST=100000
 HISTFILE=$ZSH_CACHE_DIR/zsh_history
 
+# alias
+alias zj=zellij
+alias lg=lazygit
+
 if exists zoxide; then
   eval "$(zoxide init zsh)"
 fi
