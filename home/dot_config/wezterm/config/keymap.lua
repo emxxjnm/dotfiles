@@ -73,10 +73,10 @@ M.keys = {
 
 M.key_tables = {
   resize_pane = {
-    { key = "LeftArrow", action = wezterm.action({ AdjustPaneSize = { "Left", 5 } }) },
-    { key = "DownArrow", action = wezterm.action({ AdjustPaneSize = { "Down", 5 } }) },
-    { key = "UpArrow", action = wezterm.action({ AdjustPaneSize = { "Up", 5 } }) },
-    { key = "RightArrow", action = wezterm.action({ AdjustPaneSize = { "Right", 5 } }) },
+    { key = "LeftArrow", action = act.AdjustPaneSize({ "Left", 5 }) },
+    { key = "DownArrow", action = act.AdjustPaneSize({ "Down", 5 }) },
+    { key = "UpArrow", action = act.AdjustPaneSize({ "Up", 5 }) },
+    { key = "RightArrow", action = act.AdjustPaneSize({ "Right", 5 }) },
     { key = "q", action = "PopKeyTable" },
     { key = "Escape", action = "PopKeyTable" },
   },
