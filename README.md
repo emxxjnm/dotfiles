@@ -6,3 +6,7 @@
 
 dotfiles power by chezmoi.
 
+## Installation
+```bash
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply emxxjnm
+```
