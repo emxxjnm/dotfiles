@@ -4,11 +4,6 @@ exists() { (( $+commands[$1] )); }
 # disable vi mode
 bindkey -e
 
-if exists brew; then
-  eval "$(/usr/local/bin/brew shellenv)"
-  fpath=("$(brew --prefix)/share/zsh/site-functions" $fpath)
-fi
-
 # history
 HISTSIZE=100000
 SAVEHIST=100000
