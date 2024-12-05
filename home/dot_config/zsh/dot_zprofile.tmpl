@@ -1,6 +1,6 @@
 {{- if .homebrew -}}
 {{-   $brew := "" -}}
-{{-   if .chezmoi.arch == "arm64" -}}
+{{-   if eq .chezmoi.arch "arm64" -}}
 {{-     $brew = "/opt/homebrew/bin/brew" -}}
 {{-   else -}}
 {{-     $brew = "/usr/local/bin/brew" -}}
